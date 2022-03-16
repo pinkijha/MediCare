@@ -1,45 +1,40 @@
-.header {
-    padding: 2rem 9%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-  }
-  
-  .header .logo {
-    font-size: 3rem;
-    color: var(--blue);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .header .logo i {
-    color: var(--blue);
-  }
-  
-  .header .navbar a {
-    font-size: 1.7rem;
-    color: var(--blue);
-    margin-left: 2rem;
-    font-weight: 500;
-  }
-  
-  .header .navbar a:hover {
-    color: var(--light-color);
-  }
-  
-  #menu-btn {
-    font-size: 2.5rem;
-    border-radius: 0.5rem;
-    background: #eee;
-    color: var(--blue);
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-    display: none;
-  }
+.navbar-light .navbar-nav .nav-link{
+    color: var(--secondary-color);
+}
+.navbar-light .navbar-nav .nav-link.active-link{
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.logo i{
+    font-size: 2rem;
+    color: blue;
+    padding-right: 5px;
+}
+
+
+nav{
+    
+    background-color: aliceblue;
+}
+.head{
+    height: 80px;
+}
+.header-container{
+    margin-left: 60px;
+    font-size: 2rem;
+}
+.cols-3{
+    width: 10%;
+    float: left;
+}
+.cols-4{
+    width: 90%;
+    float: left;
+}
+.menu li{
+    list-style-type: none;
+    display: inline;
+    color:#8e8e8e;
+    padding-right: 28px;
+}

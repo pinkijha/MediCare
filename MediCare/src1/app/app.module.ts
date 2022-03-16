@@ -10,8 +10,8 @@ import { AboutComponent } from './all_pages/about/about.component';
 import { ServicesComponent } from './all_pages/services/services.component';
 import { DoctorsComponent } from './all_pages/doctors/doctors.component';
 import { BookComponent } from './all_pages/book/book.component';
-// import { ContactComponent } from './all_pages/contact/contact.component';
-import { ReviewComponent } from './all_pages/review/review.component';
+import { ContactComponent } from './all_pages/contact/contact.component';
+import { ReviewComponent } from './review/review.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { ReviewComponent } from './all_pages/review/review.component';
     ServicesComponent,
     DoctorsComponent,
     BookComponent,
+    ContactComponent,
     ReviewComponent
   ],
   imports: [
