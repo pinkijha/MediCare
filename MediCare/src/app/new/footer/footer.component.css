@@ -2,14 +2,16 @@
     overflow: hidden;
     position: sticky;
     top: 100%;
-    background-color: black;
+    background-color: rgb(6, 6, 87);
     color: aliceblue;
     padding: 20px 10px;
+
 }
 
 h1{
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
+    margin-left: 24px;
 }
 a{
     color: aliceblue;
@@ -26,4 +28,9 @@ i{
 }
 p{
     font-size: 14px;
+}
+.copyright{
+    font-size: 15px;
+    margin-left: 35%;
+    font-weight: 100;
 }

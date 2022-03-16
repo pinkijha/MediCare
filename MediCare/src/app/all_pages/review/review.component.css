@@ -4,6 +4,21 @@
     gap:2rem;
   }
   
+  .heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color:var(--black);
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+
+.heading span{
+    text-transform: uppercase;
+    color:var(--green);
+}
+
   .review .box-container .box{
     border:var(--border);
     box-shadow: var(--box-shadow);
