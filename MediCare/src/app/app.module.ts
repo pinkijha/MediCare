@@ -11,6 +11,7 @@ import { ServicesComponent } from './all_pages/services/services.component';
 import { DoctorsComponent } from './all_pages/doctors/doctors.component';
 import { BookComponent } from './all_pages/book/book.component';
 import { ContactComponent } from './all_pages/contact/contact.component';
+import { ReviewComponent } from './review/review.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactComponent } from './all_pages/contact/contact.component';
     ServicesComponent,
     DoctorsComponent,
     BookComponent,
-    ContactComponent
+    ContactComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
