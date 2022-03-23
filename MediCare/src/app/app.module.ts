@@ -12,6 +12,9 @@ import { DoctorsComponent } from './all_pages/doctors/doctors.component';
 import { BookComponent } from './all_pages/book/book.component';
 // import { ContactComponent } from './all_pages/contact/contact.component';
 import { ReviewComponent } from './all_pages/review/review.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -24,10 +27,15 @@ import { ReviewComponent } from './all_pages/review/review.component';
     DoctorsComponent,
     BookComponent,
     ReviewComponent
+    
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

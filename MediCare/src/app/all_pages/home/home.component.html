@@ -133,12 +133,13 @@
             <img src="assets/buk.png" alt="">
         </div>
 
-        <form action="">
+        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
             <h3>book appointment</h3>
-            <input type="text" placeholder="your name" class="box">
-            <input type="number" placeholder="your number" class="box">
-            <input type="email" placeholder="your email" class="box">
-            <input type="date" class="box">
+            <input type="text" placeholder="your name" formControlName="name" class="box">
+            <input type="tel" placeholder="your mobile number"formControlName="number" class="box">
+            <input type="email" placeholder="your email"formControlName="email"  class="box">
+            <input type="date" formControlName="date" class="box">
+            <input type="time" formControlName="time" class="box">
             <input type="submit" value="book now" class="btn">
         </form>
 
