@@ -10,10 +10,15 @@ import { AboutComponent } from './all_pages/about/about.component';
 import { ServicesComponent } from './all_pages/services/services.component';
 import { DoctorsComponent } from './all_pages/doctors/doctors.component';
 import { BookComponent } from './all_pages/book/book.component';
+import { AppointmentComponent } from './appointment/appointment.component';
 // import { ContactComponent } from './all_pages/contact/contact.component';
 import { ReviewComponent } from './all_pages/review/review.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { DoctorsService } from './doctors.service';
+import { RouterModule } from '@angular/router';
+import { ViewAppointmentsService } from './view-appointments.service';
 
 
 @NgModule({
@@ -26,7 +31,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ServicesComponent,
     DoctorsComponent,
     BookComponent,
-    ReviewComponent
+    ReviewComponent,
+    AppointmentComponent
     
 
   ],
@@ -34,10 +40,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
 
   ],
-  providers: [],
+  providers: [DoctorsService,ViewAppointmentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

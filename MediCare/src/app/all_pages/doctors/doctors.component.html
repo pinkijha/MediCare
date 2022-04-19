@@ -6,10 +6,10 @@
 
     <div class="box-container">
 
-        <div class="box" *ngFor="let item of doctors">
-            <img src="assets/doc-1.jpg" alt="">
-            <h3>{{item.doctorname}}</h3>
-            <span>{{item.speciality}}</span>
+        <div class="box" *ngFor="let doctor of doctors">
+            <img [src]="doctor.Image" alt="">
+            <h3>{{doctor.Name}}</h3>
+            <span>{{doctor.Speciality}}</span>
             <div class="share">
                 <a href="#" class="fab fa-facebook-f"></a>
                 <a href="#" class="fab fa-twitter"></a>

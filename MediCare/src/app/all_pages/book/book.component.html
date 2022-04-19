@@ -8,18 +8,84 @@
       <img src="assets/buk.png" alt="" />
     </div>
 
-    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="checkoutForm" >
       <h3>book appointment</h3>
-      <input type="text" placeholder="your name"class="box" formControlName="name"/>
-      <input type="tel" placeholder="your mobile number" formControlName="number" class="box"/>
-      <input type="email" placeholder="your email" formControlName="email" class="box"/>
-      <input type="date" formControlName="date" class="box" />
+      <input
+        type="text"
+        placeholder="your name"
+        class="box"
+        formControlName="name"
+      />
+      <input
+        type="tel"
+        placeholder="your mobile number"
+        formControlName="number"
+        class="box"
+      />
+      <input
+        type="email"
+        placeholder="your email"
+        formControlName="email"
+        class="box"
+      />
+      <input
+        type="text"
+        placeholder="Prefered doctor"
+        class="box"
+        formControlName="doctorname"
+      />
+      <input
+        type="date"
+        placeholder="Appointement date"
+        formControlName="date"
+        class="box"
+      />
       <input type="time" formControlName="time" class="box" />
-      <input type="submit" value="book now" class="btn" />
+      <input
+        type="submit"
+        value="book now" 
+        class="btn"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"(click)="saveChanges()"
+      />
     </form>
-
-    
   </div>
+  <!-- pop up message -->
+  <div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel"></h5>
+
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div class="modal-body">
+          <h3 style="text-align: center">Appointment booked succesfully!</h3>
+        </div>
+        <div style="width: 100; margin-left: 170px">
+          <a routerLink="/appointment"><button class="btn btn-primary" type="submit" >
+            View Details
+          </button></a>
+        </div>
+        <br />
+      </div>
+    </div>
+  </div>
+
 </section>
 
 <!-- booking section ends -->
