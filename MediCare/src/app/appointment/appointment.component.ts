@@ -10,23 +10,22 @@ import { ViewAppointmentsService } from '../view-appointments.service';
   styleUrls: ['./appointment.component.css']
 })
 export class AppointmentComponent implements OnInit {
-  appointement:Iappointment[] = [];
+  appointement:any;
 
   constructor(private router: Router,public http:HttpClient,private viewappointment: ViewAppointmentsService) { }
 
   ngOnInit(): void {
     this.viewappointment.GetAllAppointments().subscribe((data:any) => {
-      let x = 0;
-      for(x=0;x<data.length;x++){
-        this.appointement.push({Id:data[x].id, Name:data[x].name, Number:data[x].number,
-          Email:data[x].email,Doctorname:data[x].doctorname,Date:data[x].date,Time:data[x].time});
-      }
+     
+      this.appointement=data;
 
-      // console.log(JSON.stringify(this.products));
 
     });
   }
+  deleteAppointment(id:any){debugger;
+    this.viewappointment.removeCartItem(id);
 
+  }
   
 
 

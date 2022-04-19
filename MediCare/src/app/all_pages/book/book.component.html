@@ -8,7 +8,7 @@
       <img src="assets/buk.png" alt="" />
     </div>
 
-    <form [formGroup]="checkoutForm" >
+    <form [formGroup]="checkoutForm" (ngSubmit)="saveChanges()">
       <h3>book appointment</h3>
       <input
         type="text"
@@ -16,12 +16,19 @@
         class="box"
         formControlName="name"
       />
+      <div class="form-text text-danger" *ngIf="(name.errors?.['required'] && (name.touched || name.dirty))">
+        please fill name
+      </div>
+      <div class="form-text text-danger" *ngIf="name.errors?.['minlength'] && (name.touched || name.dirty)">
+        please fill proper name
+      </div>
       <input
-        type="tel"
+        type="number"
         placeholder="your mobile number"
         formControlName="number"
         class="box"
       />
+      
       <input
         type="email"
         placeholder="your email"
@@ -46,7 +53,7 @@
         value="book now" 
         class="btn"
         data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"(click)="saveChanges()"
+        data-bs-target="#staticBackdrop" [disabled]="checkoutForm.invalid"
       />
     </form>
   </div>
@@ -77,7 +84,7 @@
           <h3 style="text-align: center">Appointment booked succesfully!</h3>
         </div>
         <div style="width: 100; margin-left: 170px">
-          <a routerLink="/appointment"><button class="btn btn-primary" type="submit" >
+          <a routerLink="/appointment"><button  data-bs-dismiss="modal" class="btn btn-primary" type="submit" >
             View Details
           </button></a>
         </div>
