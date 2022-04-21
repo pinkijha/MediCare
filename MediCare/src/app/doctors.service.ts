@@ -10,7 +10,7 @@ export class DoctorsService {
 
   constructor(private httpClient:HttpClient) { }
   GetAllDoctors():Observable<Idoctor[]>{
-    return this.httpClient.get<Idoctor[]>("https://localhost:44327/doctors/GetAllDoctors",{
+    return this.httpClient.get<Idoctor[]>("https://localhost:44305/api/doctors",{
       headers:{"Access-Control-Allow-Origin":"*"}
     });
   }

@@ -23,11 +23,18 @@
         please fill proper name
       </div>
       <input
-        type="number"
+        type="text"
         placeholder="your mobile number"
         formControlName="number"
         class="box"
       />
+
+      <div class="form-text text-danger" *ngIf="(number.errors?.['required'] && (number.touched || number.dirty))">
+        please fill number
+      </div>
+      <div class="form-text text-danger" *ngIf="number.errors?.['minlength'] || ['maxlength'] && (number.touched || number.dirty)">
+        please fill proper number
+      </div>
       
       <input
         type="email"
@@ -35,12 +42,19 @@
         formControlName="email"
         class="box"
       />
+      <div class="form-text text-danger" *ngIf="(email.errors?.['required'] && (email.touched || email.dirty))">
+        please fill email
+      </div>
+      <div class="form-text text-danger" *ngIf="email.errors?.['minlength'] && (email.touched || email.dirty)">
+        please fill proper email
+      </div>
       <input
         type="text"
         placeholder="Prefered doctor"
         class="box"
         formControlName="doctorname"
       />
+      
       <input
         type="date"
         placeholder="Appointement date"

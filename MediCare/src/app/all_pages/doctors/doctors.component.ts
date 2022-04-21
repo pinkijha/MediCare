@@ -17,10 +17,11 @@ export class DoctorsComponent implements OnInit {
     // this.getDoctors();
 
     this.doctorsService.GetAllDoctors().subscribe((data:any) => {
-      let x = 0;
-      for(x=0;x<data.length;x++){
-        this.doctors.push({Name:data[x].name, Speciality:data[x].id, Image:data[x].price});
-      }
+      // let x = 0;
+      // for(x=0;x<data.length;x++){
+      //   this.doctors.push({Name:data[x].name, Speciality:data[x].id, Image:data[x].price});
+      // }
+      this.doctors=data;
 
       // console.log(JSON.stringify(this.products));
 

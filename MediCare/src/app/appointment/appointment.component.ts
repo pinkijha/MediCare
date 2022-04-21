@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Iappointment } from '../iappointment';
 import { ViewAppointmentsService } from '../view-appointments.service';
+
 
 @Component({
   selector: 'app-appointment',
@@ -11,8 +12,9 @@ import { ViewAppointmentsService } from '../view-appointments.service';
 })
 export class AppointmentComponent implements OnInit {
   appointement:any;
+  data: any;
 
-  constructor(private router: Router,public http:HttpClient,private viewappointment: ViewAppointmentsService) { }
+  constructor(private router: Router,private route:ActivatedRoute,public http:HttpClient,private viewappointment: ViewAppointmentsService) { }
 
   ngOnInit(): void {
     this.viewappointment.GetAllAppointments().subscribe((data:any) => {
@@ -22,11 +24,20 @@ export class AppointmentComponent implements OnInit {
 
     });
   }
-  deleteAppointment(id:any){debugger;
-    this.viewappointment.removeCartItem(id);
+  deleteAppointment(id:any){
+    this.viewappointment.removeAppointment(id);
+   
 
   }
   
+ 
+  updateappointment(data:any){debugger;
+  
+    this.router.navigate(['book'],{ queryParams:  data, skipLocationChange: true})
 
+  }
+
+   
 
 }
+ 

@@ -22,11 +22,45 @@
         <td>{{appointment.doctorname}}</td>
         <td>{{appointment.date}}</td>
         <td>{{appointment.time}}</td>
-        <td><i class="bi bi-pencil-fill" ></i>&nbsp;
+        <td><i class="bi bi-pencil-fill" (click)="updateappointment(appointment)"></i>&nbsp;
             <i class="bi bi-trash-fill" (click)="deleteAppointment(appointment.id)"></i></td>
 
       </tr>
-      
+      <!-- pop up message -->
+  <div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel"></h5>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body">
+        <h3 style="text-align: center">Appointment booked succesfully!</h3>
+      </div>
+      <div style="width: 100; margin-left: 170px">
+        <a routerLink="/appointment"><button  data-bs-dismiss="modal" class="btn btn-primary" type="submit" >
+          View Details
+        </button></a>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>
     </tbody>
   </table>
   

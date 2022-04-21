@@ -1,7 +1,7 @@
 export interface Idoctor {
-    Name :number ,
-    Speciality :string ,
-    Image :string
+    doctorname :number ,
+    speciality :string ,
+    imagePath :string
 }
 
 

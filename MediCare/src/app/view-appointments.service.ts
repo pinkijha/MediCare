@@ -17,7 +17,7 @@ export class ViewAppointmentsService {
     });
   }
 
-  addAppointment(appointment : Iappointment){debugger;
+  addAppointment(appointment : Iappointment){
     this.httpClient.post("https://localhost:44305/api/Bookappointments",appointment,{
       headers:{"Access_Control-Allow-Origin":"*"}
     }).subscribe((appointment) => {
@@ -25,9 +25,8 @@ export class ViewAppointmentsService {
       });
   }
 
- 
 
-  removeCartItem(id:number){debugger;
+  removeAppointment(id:number){
     this.httpClient.delete("https://localhost:44305/api/Bookappointments/" + id,{
       headers:{"Access_Control-Allow-Origin":"*"}
     }).subscribe((appointment) => {
@@ -35,6 +34,15 @@ export class ViewAppointmentsService {
       });
   }
 
+  updateAppointments(id:any,appointmentdata:any){debugger;
+    return this.httpClient.put("https://localhost:44305/api/Bookappointments/" + id,appointmentdata,{
+      headers:{"Access-Control-Allow-Origin":"*"}
+    }).subscribe((appointment) => {
+      console.log(<Iappointment>appointment);
+    });
+    ;
+  }
  
+  
   
 }

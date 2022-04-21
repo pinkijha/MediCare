@@ -1,7 +1,7 @@
 export interface Iappointment {
-    
+    id:number,
     Name :string,
-    Number:number,
+    Number:string,
     email :string,
     Doctorname :string,
     Date: string,
