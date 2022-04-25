@@ -27,9 +27,7 @@ export class AppointmentComponent implements OnInit {
   deleteAppointment(id:any){
     this.viewappointment.removeAppointment(id);
    
-
   }
-  
  
   updateappointment(data:any){
   
