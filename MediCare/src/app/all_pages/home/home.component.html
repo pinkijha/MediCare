@@ -42,61 +42,6 @@
 
 <!-- icons section ends -->
 
-<!-- services section starts  -->
-
-<section class="services" id="services">
-
-    <h1 class="heading"> our <span>services</span> </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <i class="fas fa-notes-medical"></i>
-            <h3>free checkups</h3>
-            <p>Free Checking camp on occasion, <br>Get yourself checked.</p>
-            <a routerLink="services" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-ambulance"></i>
-            <h3>24/7 ambulance</h3>
-            <p>We Provide 24/7 Hours Ambulance Facilities.</p>
-            <a routerLink="services" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-user-md"></i>
-            <h3>expert doctors</h3>
-            <p>We Provides You The Best Doctors Overall the World.</p>
-            <a routerLink="services" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-pills"></i>
-            <h3>medicines</h3>
-            <p>We Provides You All Types of Medicines With Lowest Price.</p>
-            <a routerLink="services" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-procedures"></i>
-            <h3>bed facility</h3>
-            <p>In Our Medicare, We Provides you AC Or Non-AC Bed Facilities.</p>
-            <a routerLink="services" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-heartbeat"></i>
-            <h3>total care</h3>
-            <p>Medicare are Importants to Treat Minor and Serious Diseases.</p>
-            <a routerLink="services" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- services section ends -->
 
 <!-- about section starts  -->
 
@@ -121,33 +66,7 @@
 
 </section>
 
-<!-- booking section starts   -->
 
-<section class="book" id="book">
-
-    <h1 class="heading"> <span>book</span> now </h1>    
-
-    <div class="row">
-
-        <div class="image">
-            <img src="assets/buk.png" alt="">
-        </div>
-
-        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-            <h3>book appointment</h3>
-            <input type="text" placeholder="your name" formControlName="name" class="box">
-            <input type="tel" placeholder="your mobile number"formControlName="number" class="box">
-            <input type="email" placeholder="your email"formControlName="email"  class="box">
-            <input type="date" formControlName="date" class="box">
-            <input type="time" formControlName="time" class="box">
-            <input type="submit" value="book now" class="btn">
-        </form>
-
-    </div>
-
-</section>
-
-<!-- booking section ends -->
 
 
 <!-- about section ends -->

@@ -34,7 +34,7 @@ export class ViewAppointmentsService {
       });
   }
 
-  updateAppointments(id:any,appointmentdata:any){debugger;
+  updateAppointments(id:any,appointmentdata:any){
     return this.httpClient.put("https://localhost:44305/api/Bookappointments/" + id,appointmentdata,{
       headers:{"Access-Control-Allow-Origin":"*"}
     }).subscribe((appointment) => {

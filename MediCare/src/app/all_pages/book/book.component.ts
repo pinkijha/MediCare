@@ -21,13 +21,13 @@ export class BookComponent implements OnInit {
     
    }
    checkoutForm = new FormGroup({
-     id:new FormControl(),
-  name: new FormControl('',[Validators.required,Validators.minLength(3)]),
-  number: new FormControl('',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]),
-  email: new FormControl('',[Validators.required,Validators.email]),
-  doctorname:new FormControl('',[Validators.required,Validators.minLength(3)]),
-  date: new FormControl('',[Validators.required]),
-  time: new FormControl('',[Validators.required])
+      id:new FormControl(),
+      name: new FormControl('',[Validators.required,Validators.minLength(3)]),
+      number: new FormControl('',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]),
+      email: new FormControl('',[Validators.required,Validators.email]),
+      doctorname:new FormControl('',[Validators.required,Validators.minLength(3)]),
+      date: new FormControl('',[Validators.required]),
+      time: new FormControl('',[Validators.required])
 
   });
 
@@ -56,7 +56,7 @@ export class BookComponent implements OnInit {
     
   }
 
-  ngOnInit(): void {debugger;
+  ngOnInit(): void {
     this.appointmentdata=null;
     this.activatedRoute.queryParams.subscribe(params => {
     this.appointmentdata = params;
@@ -109,7 +109,7 @@ export class BookComponent implements OnInit {
       this.appointmentService.updateAppointments(this.appointmentdata.id,appointment);
 
     }
-    //alert(customer.name +" being added");
+   
 
 
   

@@ -31,7 +31,7 @@ export class AppointmentComponent implements OnInit {
   }
   
  
-  updateappointment(data:any){debugger;
+  updateappointment(data:any){
   
     this.router.navigate(['book'],{ queryParams:  data, skipLocationChange: true})
 
